@@ -1,32 +1,23 @@
---- FORTRESS OF ILMAN YONG v1.0: INSTALLATION GUIDE ---
+# 👁️ THE APOSTLE'S EYE (v1.1.8 STABLE)
+# Built by Jesse Miller / Ilman Yong
 
-[ SYSTEM REQUIREMENTS ]
-- Operating System: Ubuntu (Noble/24.04 recommended)
-- Permissions: Sudo/Root access required for firewall and SSH changes.
+## DESCRIPTION
+A tactical reconnaissance suite for phone, network, and identity intelligence. 
+Designed with self-repairing architecture to maintain stability in Linux environments.
 
-[ INSTALLATION OPTIONS ]
+## INSTALLATION
+1. Extract the .zip file to your preferred directory.
+2. Open a terminal in that directory.
+3. Run the installer to set up paths and permissions:
+   bash eye_installer.sh
 
-OPTION A: The One-Liner (Best for Coworkers)
-Run this command exactly. The '-k' flag tells curl to trust our 
-self-signed certificate.
+## OPERATION
+- Launch via the Desktop Icon or by running: bash ~/Desktop/scripts/eye.sh
+- [p] Phone Recon: Carrier extraction & VOIP detection.
+- [i] IP/Domain Recon: Whois, Nmap OS discovery, and Streamlined Traceroute.
+- [m] MDOC Otis: Michigan Department of Corrections offender search.
+- [r] Self-Repair: Reverts script to the stable v1.1.8 backup.
 
-  curl -kO https://24.180.174.83/downloads/fortress-install.sh && bash fortress-install.sh
-
-OPTION B: Manual Zip Install (USB/Direct Download)
-1. Unzip the package to your Desktop scripts folder:
-   unzip fortress_v1.0.zip -d ~/Desktop/scripts/
-2. Move into the directory:
-   cd ~/Desktop/scripts/
-3. Run the local setup script:
-   ./setup-local.sh
-
-[ POST-INSTALLATION ]
-- Refresh your terminal: source ~/.bashrc
-- Launch the Fortress: type 'fortress'
-
-[ TROUBLESHOOTING ]
-- "SSL Certificate Problem": Use the '-k' flag with curl.
-- "Permission Denied": Ensure you have used 'chmod +x' on the scripts.
-- "Command not found": Ensure the alias was added to your .bashrc.
-
---- PROTECT THE GATE. LOG THE FLIES. ---
+## DEPENDENCIES
+The installer handles directory setup, but ensure the following are on your system:
+- nmap, whois, traceroute, jq, curl, phoneinfoga
